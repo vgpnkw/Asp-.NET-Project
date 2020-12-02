@@ -20,6 +20,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="MailKit" Version="2.10.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Announcment\" />
+  </ItemGroup>
 </Project>

@@ -12,6 +12,8 @@ using WikiPedia.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using WikiPedia.Models;
 
 namespace WikiPedia
 {
@@ -24,7 +26,7 @@ namespace WikiPedia
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // !!!!!!!!!!!!!!
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -35,6 +37,8 @@ namespace WikiPedia
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
