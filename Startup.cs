@@ -30,6 +30,7 @@ namespace WikiPedia
         public void ConfigureServices(IServiceCollection services)
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
+            //string connection = Configuration["Data:ConnectionString:DefaultConnection"];
             services.AddDbContext<PublicationContext>(options => options.UseSqlServer(connection));
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
             //services.AddDbContext<ApplicationDbContext>(options =>
