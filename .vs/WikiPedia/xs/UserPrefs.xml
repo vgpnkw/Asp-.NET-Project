@@ -1,14 +1,17 @@
 ﻿<Properties StartupConfiguration="{8153D107-112D-403B-8C7A-1DAF6BC95CFC}|Default">
   <MonoDevelop.Ide.ItemProperties.WikiPedia PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/PublicationContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
       <File FileName="Models/EmailService.cs" Line="1" Column="1" />
       <File FileName="Models/Publication.cs" Line="17" Column="2" />
-      <File FileName="Models/Textpart.cs" Line="13" Column="6" />
-      <File FileName="Models/Picture.cs" Line="10" Column="31" />
-      <File FileName="Models/PublicationContext.cs" Line="25" Column="1" />
+      <File FileName="Models/Picture.cs" Line="11" Column="6" />
       <File FileName="Models/PartInfo.cs" Line="15" Column="1" />
-      <File FileName="Data/ApplicationDbContext.cs" Line="1" Column="1" />
+      <File FileName="Data/ApplicationDbContext.cs" Line="18" Column="1" />
+      <File FileName="Models/PublicationContext.cs" Line="24" Column="1" />
+      <File FileName="Controllers/HomeController.cs" Line="42" Column="10" />
+      <File FileName="Data/DataClass.cs" Line="126" Column="21" />
+      <File FileName="Views/Home/Index.cshtml" Line="2" Column="34" />
+      <File FileName="Startup.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,23 +27,15 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="PublicationContext.cs" selected="True" />
-              </Node>
-              <Node name="Properties" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Announcment" expanded="True" />
                 <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="lib" expanded="True">
-                  <Node name="jquery-validation" expanded="True">
-                    <Node name="dist" expanded="True" />
-                  </Node>
-                </Node>
+                <Node name="Images" expanded="True" />
               </Node>
               <Node name="appsettings.json" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -4,21 +4,20 @@ using WikiPedia.Data;
 
 namespace WikiPedia.Models
 {
-    public class PublicationContext
-    {
-        public class ArticleContext : DbContext
+    
+        public class PublicationContext : DbContext
         {
-            public DbSet<Publication> Articles { get; set; }
+            public DbSet<Publication> Publications { get; set; }
          
            
-            public DbSet<PartInfo> BlocksInfo { get; set; }
+            public DbSet<PartInfo> PartsInfo { get; set; }
             public DbSet<Picture> Pictures { get; set; }
 
-            public ArticleContext(DbContextOptions<ApplicationDbContext> options)
+            public PublicationContext(DbContextOptions<ApplicationDbContext> options)
                 : base(options)
             {
                 Database.EnsureCreated();
             }
         }
-    }
+    
 }

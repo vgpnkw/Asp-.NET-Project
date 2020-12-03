@@ -10,7 +10,7 @@ namespace WikiPedia.Models
         public string ShirtInfo { get; set; }
         public string Info { get; set; }
         public string ImageName { get; set; }
-        public List<Textpart> Parts { get; set; }
+        public List<PartInfo> Parts { get; set; }
         public Picture Image { get; set; }
         public string UserId { get; set; }
     }

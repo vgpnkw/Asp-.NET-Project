@@ -14,7 +14,7 @@
         "outputPath": "/Users/gapankowwitalik/Projects/WikiPedia/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gapankowwitalik/.config/NuGet/NuGet.Config"
+          "/Users/gapankowwitalik/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
