@@ -1,21 +1,22 @@
 ﻿<Properties StartupConfiguration="{8153D107-112D-403B-8C7A-1DAF6BC95CFC}|Default">
   <MonoDevelop.Ide.ItemProperties.WikiPedia PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Details.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/PublicationContext.cs">
     <Files>
       <File FileName="Models/EmailService.cs" Line="1" Column="1" />
-      <File FileName="Models/Publication.cs" Line="17" Column="2" />
-      <File FileName="Models/Picture.cs" Line="11" Column="6" />
-      <File FileName="Models/PartInfo.cs" Line="15" Column="1" />
+      <File FileName="Models/Publication.cs" />
+      <File FileName="Models/Picture.cs" />
+      <File FileName="Models/PartInfo.cs" />
       <File FileName="Data/ApplicationDbContext.cs" Line="18" Column="1" />
-      <File FileName="Models/PublicationContext.cs" Line="26" Column="1" />
-      <File FileName="Controllers/HomeController.cs" Line="57" Column="1" />
+      <File FileName="Controllers/HomeController.cs" />
       <File FileName="Data/DataClass.cs" Line="126" Column="21" />
-      <File FileName="Views/Home/Index.cshtml" Line="61" Column="36" />
-      <File FileName="Startup.cs" Line="36" Column="40" />
-      <File FileName="Program.cs" Line="25" Column="6" />
-      <File FileName="Migrations/20201127160914_Inital.cs" Line="1" Column="1" />
-      <File FileName="Migrations/ApplicationDbContextModelSnapshot.cs" Line="1" Column="1" />
-      <File FileName="Views/Home/Details.cshtml" Line="2" Column="9" />
+      <File FileName="Views/Home/Index.cshtml" />
+      <File FileName="Startup.cs" />
+      <File FileName="Program.cs" />
+      <File FileName="Migrations/20201127160914_Inital.cs" />
+      <File FileName="Migrations/ApplicationDbContextModelSnapshot.cs" />
+      <File FileName="Views/Home/Details.cshtml" />
+      <File FileName="appsettings.json" Line="8" Column="32" />
+      <File FileName="Data/PublicationContext.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,13 +30,13 @@
                 </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="ApplicationDbContext.cs" selected="True" />
+              </Node>
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Details.cshtml" selected="True" />
-                </Node>
+                <Node name="Home" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="Images" expanded="True" />

@@ -6772,7 +6772,7 @@
       "outputPath": "/Users/gapankowwitalik/Projects/WikiPedia/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gapankowwitalik/.nuget/NuGet/NuGet.Config"
+        "/Users/gapankowwitalik/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
