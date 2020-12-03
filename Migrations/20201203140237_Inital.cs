@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WikiPedia.Migrations.Publication
+namespace WikiPedia.Migrations
 {
     public partial class Inital : Migration
     {
