@@ -40,6 +40,7 @@ namespace WikiPedia.Controllers
             return View();
         }
 
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -77,5 +78,6 @@ namespace WikiPedia.Controllers
 
             return NotFound();
         }
+
     }
 }
