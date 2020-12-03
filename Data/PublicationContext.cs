@@ -1,8 +1,10 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using WikiPedia.Data;
+using WikiPedia.Models;
 
-namespace WikiPedia.Models
+namespace WikiPedia.Data
+
 {
     
         public class PublicationContext : DbContext
@@ -13,7 +15,7 @@ namespace WikiPedia.Models
             public DbSet<PartInfo> PartsInfo { get; set; }
             public DbSet<Picture> Pictures { get; set; }
 
-            public PublicationContext(DbContextOptions<ApplicationDbContext> options)
+            public PublicationContext(DbContextOptions<PublicationContext> options)
                 : base(options)
             {
                 Database.EnsureCreated();

@@ -102,3 +102,4 @@
 /Users/gapankowwitalik/Projects/WikiPedia/bin/Debug/net5.0/MimeKit.dll
 /Users/gapankowwitalik/Projects/WikiPedia/bin/Debug/net5.0/BouncyCastle.Crypto.dll
 /Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Announcment/Index.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Home/Details.cshtml.g.cs
