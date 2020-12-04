@@ -104,3 +104,9 @@
 /Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Announcment/Index.cshtml.g.cs
 /Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Home/Details.cshtml.g.cs
 /Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Hello/Hello.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Home/Edit.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Roles/Create.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Roles/Edit.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Roles/Index.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Roles/UserList.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Home/Delete.cshtml.g.cs

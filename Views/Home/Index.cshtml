@@ -1,41 +1,29 @@
 ﻿@model IEnumerable<WikiPedia.Models.Publication>
 @{ ViewData["Title"] = "Home Page"; }
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="page-header">
-                <h1>
-                    Welcome to WikiPedia!
-                </h1>
+                <blockquote class="blockquote text-right">
+                    <h1 class="mb-0" style="font-family: 'Anton', sans-serif;">
+                        Здесь вы найдёте то,
+                    </h1>
+                    <p class="blockquote-footer" style="font-family: 'East Sea Dokdo', cursive;">
+                        что вам нужно
+                    </p>
+                </blockquote>
             </div>
-            <blockquote class="blockquote text-right">
-                <p class="mb-0">
-                    History is a teacher of life.
-                </p>
-                <footer class="blockquote-footer">
-                    Marcus Tullius Cicero
-                </footer>
-            </blockquote>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3>
-                Popular articles
-            </h3>
-            <div class="row">
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <a class="btn btn-outline-info btn-block" asp-action="Edit" asp-controller="Home">Add an article</a>
-                </div>
-                <div class="col-md-5">
-                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>
+                    Popular publications
+                </h3>
                 <div class="col-md-4">
                     <form method="get">
                         <div class="form-inline form-group">
@@ -44,32 +32,41 @@
                         </div>
                     </form>
                 </div>
-            </div>
-            <div class="row">
-            </div>
-            <div class="row">
-                @foreach (var item in Model)
-                {
-    <div class="col-md-4">
-        <div class="card">
-            <img class="card-img-top" alt="Bootstrap Thumbnail First" src="@item.Image.Path">
-            <div class="card-block">
-                <h5 class="card-title">
-                    @item.Name
-                </h5>
-                <p class="card-text">
-                    @item.ShirtInfo
-                </p>
-                <p>
-                    <a class="btn btn-primary" asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">Learn more</a>
-                </p>
-            </div>
-        </div>
-    </div>}
 
 
+                <div class="row" >
+                    @foreach (var item in Model)
+                    {
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" alt="Bootstrap Thumbnail First" src="@item.Image.Path" style="margin: 0 auto;">
+                    <div class="card-block">
+                        <h5 class="card-title">
+                            @item.Name
+                        </h5>
+                        <p class="card-text">
+                            @item.ShirtInfo
+                        </p>
+                        <p>
+                            <a class="btn btn-primary" asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+            </div>}
+
+
+
+                </div>
             </div>
         </div>
+
     </div>
-
-</div>
+    <div class="row">
+        <div class="col-md-3">
+            <a class="btn btn-outline-info btn-block" asp-action="Edit" asp-controller="Home">Add an publication</a>
+        </div>
+        <div class="col-md-5">
+        </div>
+        
+    </div>
+</body>

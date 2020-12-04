@@ -79,5 +79,53 @@ namespace WikiPedia.Controllers
             return NotFound();
         }
 
+
+        [Authorize(Roles ="admin")]
+        public async Task<IActionResult> Edit(int id)
+        {
+            if (id != 0)
+            {
+                Publication publication = await db.Publications.FirstOrDefaultAsync(p => p.Id == id);
+                if (publication != null)
+                {
+                    publication.Parts = db.PartsInfo.Where(x => x.PublicationId == publication.Id).ToList();
+                    return View(publication);
+                }
+            }
+            else
+            {
+                Publication publication = new Publication();
+                db.Publications.Add(publication);
+                await db.SaveChangesAsync();
+                return View(publication);
+            }
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Publication publication)
+        {
+            db.Publications.Update(publication);
+            if (string.IsNullOrEmpty(publication.ImageName))
+            {
+                publication.ImageName = "DefIco";
+            }
+            publication.Image = db.Pictures.FirstOrDefault(x => x.Name == publication.ImageName);
+            await db.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id != null)
+            {
+                Publication article = new Publication { Id = id.Value };
+                db.Entry(article).State = EntityState.Deleted;
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return NotFound();
+        }
     }
 }
