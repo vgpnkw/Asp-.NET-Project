@@ -27,6 +27,7 @@ namespace WikiPedia.Controllers
 
             return View();
         }
+        //public IActionResult Index([FromForm] string message) => View(_userManager.Users.ToList());
 
         /*[HttpPost("/announcment")]
         public async Task<IActionResult> Post([FromForm] string message)
@@ -85,7 +86,7 @@ namespace WikiPedia.Controllers
             //{
             //    msg.To.Add(new MailboxAddress("Training academy", user.NormalizedEmail));
             //}
-            msg.To.Add(new MailboxAddress("Training academy", "h-vitalik2001@mail.ru" ));
+            
             msg.Subject = body;
             msg.Body = new TextPart("plain")
             {

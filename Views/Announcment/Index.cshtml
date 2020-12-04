@@ -1,20 +1,23 @@
 ﻿@page
 @{
+    
 }
 @addTagHelper *, Miscrosoft.AspNetCore.Mvc.TagHelpers
 
 
 <html>
 <body>
-    
-        <form asp-controller="Announcment" asp-action="Post" method="POST">
-            <div>
-                <label>Text Body</label>
-                <input type="text" name="body" />
-            </div>
-            <textarea name="message"></textarea>
-            <input type="submit" value="Send">
-        </form>
-        
+
+
+    <form asp-controller="Announcment" asp-action="Post" method="POST">
+        <div>
+            <label>Text Body</label>
+            <input type="text" name="body" />
+        </div>
+        <label>Text Input</label>
+        <textarea name="message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+    <a asp-controller="Roles" asp-action="UserList">Список пользователей</a>
 </body>
 </html>
