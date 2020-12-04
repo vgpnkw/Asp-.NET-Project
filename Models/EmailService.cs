@@ -2,6 +2,9 @@
 using MimeKit;
 using MailKit.Net.Smtp;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
+using WikiPedia.Data;
 
 namespace WikiPedia.Models
 {
@@ -28,5 +31,6 @@ namespace WikiPedia.Models
                 await client.DisconnectAsync(true);
             }
         }
+        
     }
 }

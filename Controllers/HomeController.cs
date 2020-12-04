@@ -116,12 +116,27 @@ namespace WikiPedia.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles ="admin")]
+        [HttpGet, ActionName("Delete")]
+        public async Task<IActionResult> ConfirmDelete(int? id)
+        {
+            if (id != null)
+            {
+                Publication publication = await db.Publications.FirstOrDefaultAsync(p => p.Id == id);
+                if (publication != null)
+                    return View(publication);
+            }
+
+            return NotFound();
+        }
+
+        [HttpPost]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id != null)
             {
-                Publication article = new Publication { Id = id.Value };
-                db.Entry(article).State = EntityState.Deleted;
+                Publication publication = new Publication { Id = id.Value };
+                db.Entry(publication).State = EntityState.Deleted;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
