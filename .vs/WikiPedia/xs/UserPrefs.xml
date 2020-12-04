@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Views/Home/Details.cshtml" Line="1" Column="1" />
       <File FileName="Views/Roles/Index.cshtml" />
-      <File FileName="ViewModels/ChangeRoleViewModel.cs" Line="18" Column="10" />
+      <File FileName="ViewModels/ChangeRoleViewModel.cs" Line="23" Column="1" />
       <File FileName="Views/Roles/Edit.cshtml" />
       <File FileName="Views/Roles/Create.cshtml" />
       <File FileName="Views/Roles/UserList.cshtml" />
@@ -30,7 +30,9 @@
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="ChangeRoleViewModel.cs" selected="True" />
+              </Node>
               <Node name="Views" expanded="True">
                 <Node name="Announcment" expanded="True" />
                 <Node name="Home" expanded="True" />
