@@ -5,6 +5,7 @@ namespace WikiPedia.Models
     {
         public int PartInfoId { get; set; }
         public string PartName { get; set; }
+        
         public int PrevId { get; set; }
         public string Text { get; set; }
         public string PatrImageName { get; set; }
