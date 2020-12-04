@@ -104,3 +104,9 @@
 /Users/gapankowwitalik/Projects/WikiPedia/obj/Release/net5.0/WikiPedia.pdb
 /Users/gapankowwitalik/Projects/WikiPedia/obj/Release/net5.0/WikiPedia.genruntimeconfig.cache
 /Users/gapankowwitalik/Projects/WikiPedia/obj/Release/net5.0/WikiPedia.csprojAssemblyReference.cache
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Release/net5.0/Razor/Views/Home/Delete.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Release/net5.0/Razor/Views/Home/Edit.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Release/net5.0/Razor/Views/Roles/Create.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Release/net5.0/Razor/Views/Roles/Edit.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Release/net5.0/Razor/Views/Roles/Index.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Release/net5.0/Razor/Views/Roles/UserList.cshtml.g.cs
