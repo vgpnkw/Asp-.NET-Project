@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{8153D107-112D-403B-8C7A-1DAF6BC95CFC}|Default">
   <MonoDevelop.Ide.ItemProperties.WikiPedia PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/RolesController.cs">
     <Files>
       <File FileName="Views/Home/Details.cshtml" Line="1" Column="1" />
       <File FileName="Views/Roles/Index.cshtml" />
@@ -23,7 +23,7 @@
       <File FileName="Startup.cs" Line="91" Column="1" />
       <File FileName="Data/DataClass.cs" />
       <File FileName="Program.cs" Line="19" Column="13" />
-      <File FileName="appsettings.json" Line="14" Column="29" />
+      <File FileName="appsettings.json" Line="16" Column="1" />
       <File FileName="Data/PublicationContext.cs" Line="21" Column="1" />
       <File FileName="Data/ApplicationDbContext.cs" Line="1" Column="1" />
       <File FileName="Views/Home/Delete.cshtml" Line="1" Column="1" />
@@ -36,16 +36,20 @@
       <File FileName="AllLog.txt" Line="1" Column="1" />
       <File FileName="Models/PartInfo.cs" Line="16" Column="1" />
       <File FileName="README.md" Line="1" Column="1" />
+      <File FileName="Models/Picture.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WikiPedia" expanded="True">
             <Node name="WikiPedia" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="RolesController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
