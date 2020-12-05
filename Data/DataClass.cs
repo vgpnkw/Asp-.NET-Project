@@ -184,9 +184,15 @@ namespace WikiPedia.Data
                         Name = "pushkin_mol",
                         Path = "/Images/pushkin_mol.jpg",
                         Text = "«Пушкин и Гоголь»(художник Николай Алексеев)"
+                    },
+                    new Picture()
+                    {
+                        Name = "DefIco",
+                        Path = "/Images/Def1.jpg",
+                        Text = "«default"
                     }
-                    
-                    
+
+
                 //new Picture()
                 //{
                 //    Name = "DefIcoPub",

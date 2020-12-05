@@ -10,7 +10,7 @@
       <File FileName="Views/Roles/UserList.cshtml" />
       <File FileName="Views/Announcment/Index.cshtml" />
       <File FileName="Controllers/AnnouncmentController.cs" Line="23" Column="1" />
-      <File FileName="Controllers/RolesController.cs" Line="76" Column="36" />
+      <File FileName="Controllers/RolesController.cs" Line="77" Column="14" />
       <File FileName="Views/Home/Index.cshtml" />
       <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
       <File FileName="Properties/launchSettings.json" />
@@ -27,7 +27,6 @@
       <File FileName="Data/PublicationContext.cs" Line="21" Column="1" />
       <File FileName="Data/ApplicationDbContext.cs" Line="1" Column="1" />
       <File FileName="Views/Home/Delete.cshtml" Line="1" Column="1" />
-      <File FileName="web.config" Line="17" Column="17" />
       <File FileName="404.html" Line="1" Column="1" />
       <File FileName="403.html" Line="11" Column="8" />
       <File FileName="logs/FileLogger.cs" Line="42" Column="6" />
@@ -43,9 +42,7 @@
         <State name="__root__">
           <Node name="WikiPedia" expanded="True">
             <Node name="WikiPedia" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="RolesController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True" />
