@@ -82,9 +82,9 @@ namespace WikiPedia
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-            loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), Configuration.GetSection("AllLog").Value),
-                Path.Combine(Directory.GetCurrentDirectory(), Configuration.GetSection("ErrorLog").Value));
-            var logger = loggerFactory.CreateLogger("FileLogger");
+            //loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), Configuration.GetSection("AllLog").Value),
+            //    Path.Combine(Directory.GetCurrentDirectory(), Configuration.GetSection("ErrorLog").Value));
+            //var logger = loggerFactory.CreateLogger("FileLogger");
         }
     }
 }
