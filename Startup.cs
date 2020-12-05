@@ -14,6 +14,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using WikiPedia.Models;
+using Microsoft.Extensions.Logging;
+using WikiPedia.logs;
+using System.IO;
 
 namespace WikiPedia
 {
@@ -51,7 +54,7 @@ namespace WikiPedia
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -79,6 +82,9 @@ namespace WikiPedia
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), Configuration.GetSection("AllLog").Value),
+                Path.Combine(Directory.GetCurrentDirectory(), Configuration.GetSection("ErrorLog").Value));
+            var logger = loggerFactory.CreateLogger("FileLogger");
         }
     }
 }

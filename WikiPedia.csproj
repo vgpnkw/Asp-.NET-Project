@@ -29,5 +29,6 @@
     <Folder Include="Views\Hello\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Roles\" />
+    <Folder Include="logs\" />
   </ItemGroup>
 </Project>

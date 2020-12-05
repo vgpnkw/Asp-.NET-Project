@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
@@ -43,6 +44,7 @@ namespace WikiPedia.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete(string id)
         {
             IdentityRole role = await _roleManager.FindByIdAsync(id);
@@ -54,7 +56,7 @@ namespace WikiPedia.Controllers
         }
 
         public IActionResult UserList() => View(_userManager.Users.ToList());
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Edit(string userId)
         {
             // получаем пользователя
