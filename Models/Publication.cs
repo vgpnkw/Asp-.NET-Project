@@ -13,5 +13,6 @@ namespace WikiPedia.Models
         public List<PartInfo> Parts { get; set; }
         public Picture Image { get; set; }
         public string UserId { get; set; }
+
     }
 }

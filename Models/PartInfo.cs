@@ -11,5 +11,6 @@ namespace WikiPedia.Models
         public string PatrImageName { get; set; }
         public Picture Image { get; set; }
         public int PublicationId { get; set; }
+        //public byte[] Avatar { get; set; }
     }
 }
