@@ -7,6 +7,8 @@ namespace WikiPedia.Data
 {
     public class DataClass
     {
+        public static Publication TempPublication = new Publication();
+        public static List<PartInfo> TempList = new List<PartInfo>();
         public static void Initialize(PublicationContext context)
         {
             if (!context.Publications.Any())
@@ -69,60 +71,7 @@ namespace WikiPedia.Data
 
                         }
                     }
-                    //new Publication
-                    //{
-                    //    Name = "Byzantine Empire",
-                    //    ShirtInfo = "Eastern part of Roman Empire",
-                    //    Info =
-                    //        "The Byzantine Empire, also referred to as the Eastern Roman Empire, or Byzantium, was the continuation of the Roman Empire in its eastern provinces during Late Antiquity and the Middle Ages, when its capital city was Constantinople (modern Istanbul, formerly Byzantium). It survived the fragmentation and fall of the Western Roman Empire in the 5th century AD and continued to exist for an additional thousand years until it fell to the Ottoman Empire in 1453.[1] During most of its existence, the empire was the most powerful economic, cultural, and military force in Europe. Byzantine Empire is a term created after the end of the realm; its citizens continued to refer to their empire simply as the Roman Empire (Greek: Βασιλεία Ῥωμαίων, tr. Basileía Rhōmaíōn; Latin: Imperium Romanum), or Romania (Greek: Ῥωμανία, romanized: Rhōmanía), and to themselves as Romans (Greek: Ῥωμαῖοι, romanized: Rhōmaîoi). Several signal events from the 4th to 6th centuries mark the period of transition during which the Roman Empire's Greek East and Latin West diverged. Constantine I (r. 324–337) reorganised the empire, made Constantinople the new capital and legalised Christianity. Under Theodosius I (r. 379–395), Christianity became the state religion and other religious practices were proscribed. In the reign of Heraclius (r. 610–641), the Empire's military and administration were restructured and adopted Greek for official use in place of Latin.",
-                    //    ImageName = "ByzantIco",
-
-                    //    Parts = new List<PartInfo>()
-                    //    {
-                    //        new PartInfo
-                    //        {
-                    //            PartName = "History",
-                    //            Text =
-                    //                "This history of the Byzantine Empire covers the history of the Eastern Roman Empire from late antiquity until the Fall of Constantinople in 1453 AD. Several events from the 4th to 6th centuries mark the transitional period during which the Roman Empire's east and west divided. In 285, the emperor Diocletian (r. 284–305) partitioned the Roman Empire's administration into eastern and western halves.[1] Between 324 and 330, Constantine I (r. 306–337) transferred the main capital from Rome to Byzantium, later known as Constantinople (City of Constantine) and Nova Roma (New Rome). Under Theodosius I (r. 379–395), Christianity became the Empire's official state religion and others such as Roman polytheism were proscribed. And finally, under the reign of Heraclius (r. 610–641), the Empire's military and administration were restructured and adopted Greek for official use instead of Latin. Thus, although it continued the Roman state and maintained Roman state traditions, modern historians distinguish Byzantium from ancient Rome insofar as it was oriented towards Greek rather than Latin culture, and characterised by Orthodox Christianity rather than Roman polytheism.",
-                    //            PatrImageName = "RomanEmp1",
-                    //        },
-                    //        new PartInfo
-                    //        {
-                    //            PartName = "Economy",
-                    //            Text =
-                    //                "The Byzantine economy was among the most robust economies in the Mediterranean for many centuries. Constantinople was a prime hub in a trading network that at various times extended across nearly all of Eurasia and North Africa. Some scholars argue that, up until the arrival of the Arabs in the 7th century, the Eastern Roman Empire had the most powerful economy in the world. The Arab conquests, however, would represent a substantial reversal of fortunes contributing to a period of decline and stagnation. Constantine V's reforms (c. 765) marked the beginning of a revival that continued until 1204. From the 10th century until the end of the 12th, the Byzantine Empire projected an image of luxury, and the travelers were impressed by the wealth accumulated in the capital. All this changed with the arrival of the Fourth Crusade, which was an economic catastrophe. The Palaiologoi tried to revive the economy, but the late Byzantine state would not gain full control of either the foreign or domestic economic forces.",
-                    //            PatrImageName = "RomanEmp1",
-                    //        },
-
-                    //    }
-                    //},
-                    //new Publication
-                    //{
-                    //    Name = "Ancient Carthage",
-                    //    ShirtInfo = "Ancient Phoenician city-state",
-                    //    Info =
-                    //        "Carthage (/ˈkɑːrθədʒ/; Punic: 𐤒𐤓𐤕𐤟𐤇𐤃𐤔𐤕, romanized: Qart-ḥadašt, lit. 'New City'; Latin: Carthāgō) was an ancient Phoenician city-state and civilization located in present-day Tunisia. Founded around 814 BC as a colony of Tyre, within centuries it became the center of the Carthaginian Empire, a major commercial and maritime power that dominated the western Mediterranean until the mid third century BC.",
-                    //    ImageName = "CarthageIco",
-
-                    //    Parts = new List<PartInfo>()
-                    //    {
-                    //        new PartInfo
-                    //        {
-                    //            PartName = "History",
-                    //            Text =
-                    //                "The city of Carthage was founded in the 9th century BC on the coast of Northwest Africa, in what is now Tunisia, as one of a number of Phoenician settlements in the western Mediterranean created to facilitate trade from the city of Tyre on the coast of what is now Lebanon. The name of both the city and the wider republic that grew out of it, Carthage developed into a significant trading empire throughout the Mediterranean. The date from which Carthage can be counted as an independent power cannot exactly be determined, and probably nothing distinguished Carthage from the other Phoenician colonies in Northwest Africa and the Mediterranean during 800–700 BC. By the end of the 7th century BC, Carthage was becoming one of the leading commercial centres of the West Mediterranean region. After a long conflict with the emerging Roman Republic, known as the Punic Wars (264–146 BC), Rome finally destroyed Carthage in 146 BC. A Roman Carthage was established on the ruins of the first. Roman Carthage was eventually destroyed—its walls torn down, its water supply cut off, and its harbours made unusable—following its conquest by Arab invaders at the close of the 7th century. It was replaced by Tunis as the major regional centre, which has spread to include the ancient site of Carthage in a modern suburb.",
-                    //            PatrImageName = "RomanEmp1",
-                    //        },
-                    //        new PartInfo
-                    //        {
-                    //            PartName = "Government and politics",
-                    //            Text =
-                    //                "Like most ancient societies, including the Phoenician city-states, Carthage was initially ruled as a monarchy, although modern scholars debate whether this stemmed from a misunderstanding by Greek writers. Traditionally, most Phoenician kings did not exercise absolute power, but consulted with a body of advisors called the Adirim (mighty ones), which was likely comprised of the wealthiest members of society, namely merchants.[121] Carthage seems to have been ruled by a similar body known as the Blm, made up of nobles responsible for all important matters of state, including religion, administration, and the military.[120] Within this cabal was a hierarchy topped by the dominant family, usually the wealthiest members of the merchant class, which had some sort of executive power. Records indicate that different families held power at different times, suggesting a nonhereditary system of government dependent on the support or approval of the consultative body.",
-                    //            PatrImageName = "RomanEmp1",
-                    //        },
-
-                    //    }
-                    //}
+                    
                     
                 );
                 context.SaveChanges();

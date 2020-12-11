@@ -1,23 +1,23 @@
-﻿@model WikiPedia.Models.Publication
+﻿@model WikiPedia.Models.PartInfo
 @{
-    ViewBag.Title = "Removing the publication";
+    ViewBag.Title = "Removing the part";
 }
 
 <div>
     <dl class="dl-horizontal">
         <dt>Title</dt>
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.PartName)
         </dd>
 
         <dt>About</dt>
         <dd>
-            @Html.DisplayFor(model => model.Info)
+            @Html.DisplayFor(model => model.Text)
         </dd>
     </dl>
 
     <div>
-        <form asp-controller="Home" asp-action="Delete" method="post">
+        <form asp-controller="Home" asp-action="DeletePart" asp-route-idBlock="@Model.PartInfoId" asp-route-name="@Model.PartName" method="post">
             <div class="form-group">
                 <input type="submit" class="btn btn-outline-danger" value="Remove" />
             </div>

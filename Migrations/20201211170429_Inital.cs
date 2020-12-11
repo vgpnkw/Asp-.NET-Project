@@ -54,11 +54,12 @@ namespace WikiPedia.Migrations
                     PartInfoId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PartName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PrevId = table.Column<int>(type: "int", nullable: false),
+                    PrevName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Text = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PatrImageName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImagePictureId = table.Column<int>(type: "int", nullable: true),
-                    PublicationId = table.Column<int>(type: "int", nullable: false)
+                    PublicationId = table.Column<int>(type: "int", nullable: false),
+                    PublicationName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

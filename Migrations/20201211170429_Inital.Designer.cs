@@ -10,7 +10,7 @@ using WikiPedia.Data;
 namespace WikiPedia.Migrations
 {
     [DbContext(typeof(PublicationContext))]
-    [Migration("20201203140237_Inital")]
+    [Migration("20201211170429_Inital")]
     partial class Inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,11 +37,14 @@ namespace WikiPedia.Migrations
                     b.Property<string>("PatrImageName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PrevId")
-                        .HasColumnType("int");
+                    b.Property<string>("PrevName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PublicationId")
                         .HasColumnType("int");
+
+                    b.Property<string>("PublicationName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Text")
                         .HasColumnType("nvarchar(max)");

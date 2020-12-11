@@ -111,3 +111,6 @@
 /Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/WikiPedia.genruntimeconfig.cache
 /Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/WikiPedia.csprojAssemblyReference.cache
 /Users/gapankowwitalik/Projects/WikiPedia/bin/Debug/net5.0/appsettings.Production.json
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Home/DeletePart.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/obj/Debug/net5.0/Razor/Views/Home/EditPart.cshtml.g.cs
+/Users/gapankowwitalik/Projects/WikiPedia/bin/Debug/net5.0/mono_crash.11a6748113.1.json

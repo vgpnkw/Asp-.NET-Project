@@ -1,4 +1,5 @@
-﻿@model IEnumerable<WikiPedia.Models.Publication>
+﻿
+@model WikiPedia.Models.SearchPublication
 @{ ViewData["Title"] = "Home Page"; }
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,7 +14,7 @@
                     <h1 class="mb-0" style="font-family: 'Anton', sans-serif;">
                         Здесь вы найдёте всё, что вам нужно
                     </h1>
-                    
+
                 </blockquote>
             </div>
         </div>
@@ -32,25 +33,26 @@
                 </div>
 
 
-                <div class="row" >
-                    @foreach (var item in Model)
+                <div class="row">
+                    @foreach (var item in Model.Publications)
                     {
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" alt="Bootstrap Thumbnail First" src="@item.Image.Path" style="margin: 0 auto;">
-                    <div class="card-block">
-                        <h5 class="card-title">
-                            @item.Name
-                        </h5>
-                        <p class="card-text">
-                            @item.ShirtInfo
-                        </p>
-                        <p>
-                            <a class="btn btn-primary" asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">Learn more</a>
-                        </p>
-                    </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" alt="Bootstrap Thumbnail First" src="@item.Image.Path" style="margin: 0 auto;">
+
+                <div class="card-block">
+                    <h5 class="card-title">
+                        @item.Name
+                    </h5>
+                    <p class="card-text">
+                        @item.ShirtInfo
+                    </p>
+                    <p>
+                        <a class="btn btn-primary" asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">Learn more</a>
+                    </p>
                 </div>
-            </div>}
+            </div>
+        </div>}
 
 
 
@@ -65,6 +67,6 @@
         </div>
         <div class="col-md-5">
         </div>
-        
+
     </div>
 </body>

@@ -35,11 +35,14 @@ namespace WikiPedia.Migrations
                     b.Property<string>("PatrImageName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PrevId")
-                        .HasColumnType("int");
+                    b.Property<string>("PrevName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PublicationId")
                         .HasColumnType("int");
+
+                    b.Property<string>("PublicationName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Text")
                         .HasColumnType("nvarchar(max)");
