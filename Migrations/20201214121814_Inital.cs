@@ -13,9 +13,9 @@ namespace WikiPedia.Migrations
                 {
                     PictureId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PictureName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Path = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Text = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PictureText = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
                 },
                 constraints: table =>

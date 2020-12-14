@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -10,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using WikiPedia.Data;
 using WikiPedia.Models;
+using WikiPedia.ViewModels;
 
 namespace WikiPedia.Controllers
 {
@@ -60,7 +62,7 @@ namespace WikiPedia.Controllers
             var publications = string.IsNullOrEmpty(name) ? db.Publications.ToList() : db.Publications.Where(p => p.Name.Contains(name)).ToList();
             foreach (var item in publications)
             {
-                item.Image = db.Pictures.FirstOrDefault(x => x.Name == item.ImageName);
+                item.Image = db.Pictures.FirstOrDefault(x => x.PictureName == item.ImageName);
                 item.Parts = db.PartsInfo.Where(x => x.PublicationId == item.Id).ToList();
                 foreach (var part in item.Parts)
                 {
@@ -83,13 +85,13 @@ namespace WikiPedia.Controllers
                 Publication publication = await db.Publications.FirstOrDefaultAsync(p => p.Id == id);
                 publication.Parts = db.PartsInfo.Where(x => x.PublicationId == publication.Id).ToList();
                 var Pictures = db.Pictures;
-                publication.Image = Pictures.FirstOrDefault(x => x.Name == publication.ImageName);
+                publication.Image = Pictures.FirstOrDefault(x => x.PictureName == publication.ImageName);
                 foreach (var item in publication.Parts)
                 {
                     if (item.PatrImageName == null)
-                        item.Image = Pictures.FirstOrDefault(x => x.Name == "DefIco");
+                        item.Image = Pictures.FirstOrDefault(x => x.PictureName == "DefIco");
                     else
-                        item.Image = Pictures.FirstOrDefault(x => x.Name == item.PatrImageName);
+                        item.Image = Pictures.FirstOrDefault(x => x.PictureName == item.PatrImageName);
                 }
                 if (publication != null)
                     return View(publication);
@@ -116,7 +118,7 @@ namespace WikiPedia.Controllers
             {
                 Publication publication = new Publication();
                 publication.Name = "New publication";
-                publication.Parts = DataClass.TempList;
+                publication.Parts = DataClass.PartTempList;
                 DataClass.TempPublication = publication;
                 return View(publication);
             }
@@ -133,18 +135,30 @@ namespace WikiPedia.Controllers
             {
                 publication.ImageName = "DefIco";
             }
-            publication.Image = db.Pictures.FirstOrDefault(x => x.Name == publication.ImageName);
-
-            if (DataClass.TempList.Count != 0)
+            publication.Image = db.Pictures.FirstOrDefault(x => x.PictureName == publication.ImageName);
+            if (DataClass.PartTempList != null)
             {
-                foreach (var item in DataClass.TempList)
+                foreach (var item in DataClass.PartTempList)
                 {
-                    
                     item.PublicationId = publication.Id;
-                    
                     NewPart(item);
                 }
-                DataClass.TempList.Clear();
+                DataClass.PartTempList.Clear();
+            }
+
+            if (DataClass.ImagesTempList.Count != 0)
+            {
+                foreach (var item in DataClass.ImagesTempList)
+                {
+                    Picture delPict = db.Pictures.FirstOrDefault(x => x.PictureName == item.PictureName);
+                    if (delPict != null)
+                    {
+                        db.Pictures.Remove(delPict);
+
+                    }
+                    NewImage(item);
+                }
+                DataClass.ImagesTempList.Clear();
             }
 
             var blocks = db.PartsInfo.Where(x => x.PublicationId == publication.Id).ToList();
@@ -178,6 +192,13 @@ namespace WikiPedia.Controllers
         public void NewPart(PartInfo partInfo)
         {
             db.PartsInfo.Update(partInfo);
+            db.SaveChanges();
+        }
+
+        [HttpPost]
+        public void NewImage(Picture picture)
+        {
+            db.Pictures.Update(picture);
             db.SaveChanges();
         }
 
@@ -220,7 +241,7 @@ namespace WikiPedia.Controllers
             }
             else
             {
-                var part = DataClass.TempList.FirstOrDefault(p => p.PartName == name);
+                var part = DataClass.PartTempList.FirstOrDefault(p => p.PartName == name);
                 return View(part);
             }
 
@@ -244,8 +265,8 @@ namespace WikiPedia.Controllers
             }
             else
             {
-                var part = DataClass.TempList.FirstOrDefault(p => p.PartName == name);
-                DataClass.TempList.Remove(part);
+                var part = DataClass.PartTempList.FirstOrDefault(p => p.PartName == name);
+                DataClass.PartTempList.Remove(part);
                 DataClass.TempPublication.Parts.Remove(part);
                 return View("Edit", DataClass.TempPublication);
             }
@@ -267,7 +288,7 @@ namespace WikiPedia.Controllers
             {
                 if (partName != null)
                 {
-                    PartInfo partInfo = DataClass.TempList.FirstOrDefault(p => p.PartName == partName);
+                    PartInfo partInfo = DataClass.PartTempList.FirstOrDefault(p => p.PartName == partName);
                     partInfo.PrevName = partInfo.PartName;
                     return View(partInfo);
                 }
@@ -313,13 +334,93 @@ namespace WikiPedia.Controllers
             }
             else
             {
-                PartInfo deletePartInfo = DataClass.TempList.FirstOrDefault(p => p.PartName == partInfo.PrevName);
-                DataClass.TempList.Remove(deletePartInfo);
-                DataClass.TempList.Add(partInfo);
-                publication.Parts = DataClass.TempList;
+                PartInfo deletePartInfo = DataClass.PartTempList.FirstOrDefault(p => p.PartName == partInfo.PrevName);
+                DataClass.PartTempList.Remove(deletePartInfo);
+                DataClass.PartTempList.Add(partInfo);
+                publication.Parts = DataClass.PartTempList;
+            }
+            DataClass.TempPart = null;
+            return View("Edit", publication);
+        }
+
+        public async Task<ActionResult> EditPicture(string pictureName, int type)
+        {
+            if (pictureName != null)
+            {
+                Picture picture = await db.Pictures.FirstOrDefaultAsync(p => p.PictureName == pictureName);
+                if (picture == null)
+                {
+                    picture = DataClass.ImagesTempList.FirstOrDefault(p => p.PictureName == pictureName);
+                }
+                if (picture != null)
+                {
+                    PictureViewModel pictureLoad = new PictureViewModel();
+                    pictureLoad.PictureText = picture.PictureText;
+                    pictureLoad.PictureName = picture.PictureName;
+                    pictureLoad.PicturePrevName = pictureLoad.PictureName;
+                    pictureLoad.Type = type;
+                    return View(pictureLoad);
+                }
+            }
+            else
+            {
+                PictureViewModel picture = new PictureViewModel();
+                picture.PictureName = "New picture";
+                picture.Type = type;
+                if (type == 1)
+                {
+                    DataClass.TempPublication.ImageName = picture.PictureName;
+                }
+                else
+                {
+                    DataClass.TempPart.PatrImageName = picture.PictureName;
+                }
+                return View(picture);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> EditPicture(PictureViewModel pictureLoad)
+        {
+            Picture picture = new Picture();
+            if (pictureLoad.PicturePrevName != null)
+            {
+                picture = db.Pictures.FirstOrDefault(x => x.PictureName == pictureLoad.PicturePrevName);
+                if (picture == null)
+                {
+                    picture = DataClass.ImagesTempList.FirstOrDefault(p => p.PictureName == pictureLoad.PicturePrevName);
+                }
             }
 
-            return View("Edit", publication);
+            if (pictureLoad.PictureName != null)
+                picture.PictureName = pictureLoad.PictureName;
+            if (pictureLoad.PictureText != null)
+                picture.PictureText = pictureLoad.PictureText;
+            if (pictureLoad.Image != null)
+            {
+                byte[] imageData = null;
+                // считываем переданный файл в массив байтов
+                using (var binaryReader = new BinaryReader(pictureLoad.Image.OpenReadStream()))
+                {
+                    imageData = binaryReader.ReadBytes((int)pictureLoad.Image.Length);
+                }
+
+                // установка массива байтов
+                picture.Image = imageData;
+            }
+
+            DataClass.ImagesTempList.Add(picture);
+
+
+            if (pictureLoad.Type == 1)
+            {
+                DataClass.TempPublication.ImageName = pictureLoad.PictureName;
+                return View("Edit", DataClass.TempPublication);
+            }
+            DataClass.TempPart.PatrImageName = pictureLoad.PictureName;
+            return View("EditPart", DataClass.TempPart);
+
         }
     }
 }

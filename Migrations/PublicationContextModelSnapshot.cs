@@ -66,13 +66,13 @@ namespace WikiPedia.Migrations
                     b.Property<byte[]>("Image")
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Path")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Text")
+                    b.Property<string>("PictureName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureText")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PictureId");

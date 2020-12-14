@@ -10,7 +10,7 @@ using WikiPedia.Data;
 namespace WikiPedia.Migrations.ApplicationDb
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201211170441_Inital")]
+    [Migration("20201214121856_Inital")]
     partial class Inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -8,7 +8,9 @@ namespace WikiPedia.Data
     public class DataClass
     {
         public static Publication TempPublication = new Publication();
-        public static List<PartInfo> TempList = new List<PartInfo>();
+        public static PartInfo TempPart = new PartInfo();
+        public static List<PartInfo> PartTempList = new List<PartInfo>();
+        public static List<Picture> ImagesTempList = new List<Picture>();
         public static void Initialize(PublicationContext context)
         {
             if (!context.Publications.Any())
@@ -82,63 +84,63 @@ namespace WikiPedia.Data
                 context.Pictures.AddRange(
                     new Picture()
                     {
-                        Name = "lermontov",
+                        PictureName = "lermontov",
                         Path = "/Images/Mikhail_lermontov.jpg",
                     },
                     new Picture()
                     {
-                        Name = "pushkin",
+                        PictureName = "pushkin",
                         Path = "/Images/Pushkin.jpg",
-                        Text = "О. А. Кипренский. Портрет А. С. Пушкина"
+                        PictureText = "О. А. Кипренский. Портрет А. С. Пушкина"
                     },
                     new Picture()
                     {
-                        Name = "gogol",
+                        PictureName = "gogol",
                         Path = "/Images/gogol.jpg",
-                        Text = "Овальный портрет Александра Иванова (1840—1841)"
+                        PictureText = "Овальный портрет Александра Иванова (1840—1841)"
                     },
                     new Picture()
                     {
-                        Name = "tolstoy",
+                        PictureName = "tolstoy",
                         Path = "/Images/Tolstoy.jpg",
                     },
                     new Picture()
                     {
-                        Name = "tolstoy_town",
+                        PictureName = "tolstoy_town",
                         Path = "/Images/tolstoy_town.jpg",
                     },
                     new Picture()
                     {
-                        Name = "gogols_city",
+                        PictureName = "gogols_city",
                         Path = "/Images/gogols_city.jpg",
                     },
                     new Picture()
                     {
-                        Name = "lermontov_family",
+                        PictureName = "lermontov_family",
                         Path = "/Images/lermontov_family.gif",
                     },
                     new Picture()
                     {
-                        Name = "kaukaz",
+                        PictureName = "kaukaz",
                         Path = "/Images/kaukaz.jpg",
                     },
                     new Picture()
                     {
-                        Name = "pushkin_der",
+                        PictureName = "pushkin_der",
                         Path = "/Images/Pushkin_derzhavin.jpg",
-                        Text = "Пушкин на лицейском экзамене.Картина И.Репина(1911)"
+                        PictureText = "Пушкин на лицейском экзамене.Картина И.Репина(1911)"
                     },
                     new Picture()
                     {
-                        Name = "pushkin_mol",
+                        PictureName = "pushkin_mol",
                         Path = "/Images/pushkin_mol.jpg",
-                        Text = "«Пушкин и Гоголь»(художник Николай Алексеев)"
+                        PictureText = "«Пушкин и Гоголь»(художник Николай Алексеев)"
                     },
                     new Picture()
                     {
-                        Name = "DefIco",
+                        PictureName = "DefIco",
                         Path = "/Images/Def1.jpg",
-                        Text = "«default"
+                        PictureText = "«default"
                     }
 
 

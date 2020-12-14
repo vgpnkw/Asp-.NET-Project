@@ -13,7 +13,15 @@
     </div>
     <div class="form-group">
         <label asp-for="PatrImageName" class="control-label">Image</label>
-        <input type="text" asp-for="PatrImageName" class="form-control" />
+        @if (Model.PatrImageName != null)
+        {
+            <a class="btn btn-outline-warning btn-block" asp-action="EditPicture" asp-controller="Home" asp-route-pictureName="@Model.PatrImageName" asp-route-type="0">Edit an image</a>
+        }
+        else
+        {
+            <a class="btn btn-outline-info btn-block" asp-action="EditPicture" asp-controller="Home" asp-route-pictureName="@Model.PatrImageName" asp-route-type="0">Add an image</a>
+        }
+        <input type="text" asp-for="PatrImageName" hidden="true" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="PublicationId" class="control-label" hidden="true">Publication Id</label>
