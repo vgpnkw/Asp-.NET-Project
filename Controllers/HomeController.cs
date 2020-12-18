@@ -7,17 +7,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using WikiPedia.Data;
 using WikiPedia.Models;
+using WikiPedia.signalR;
 using WikiPedia.ViewModels;
 
 namespace WikiPedia.Controllers
 {
     public class HomeController : Controller
     {
-
+        IHubContext<ChatHub> hubContext;
         private  PublicationContext db;
         private readonly ILogger<HomeController> _logger;
         private ApplicationDbContext dbUsers;
@@ -26,12 +28,13 @@ namespace WikiPedia.Controllers
         //{
         //    _logger = logger;
         //}
-        public HomeController(ILogger<HomeController> logger, PublicationContext contextArt, ApplicationDbContext contextApp)
+        public HomeController(ILogger<HomeController> logger, PublicationContext contextArt, ApplicationDbContext contextApp, IHubContext<ChatHub> hubContext)
         {
             db = contextArt;
             dbUsers = contextApp;
             _logger = logger;
-            //this.hubContext = hubContext;
+            this.hubContext = hubContext;
+            
         }
 
         
@@ -50,9 +53,9 @@ namespace WikiPedia.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Publication article)
+        public async Task<IActionResult> Create(Publication publication)
         {
-            db.Publications.Add(article);
+            db.Publications.Add(publication);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
@@ -120,6 +123,7 @@ namespace WikiPedia.Controllers
                 publication.Name = "New publication";
                 publication.Parts = DataClass.PartTempList;
                 DataClass.TempPublication = publication;
+                
                 return View(publication);
             }
 
@@ -177,6 +181,7 @@ namespace WikiPedia.Controllers
             }
             await db.SaveChangesAsync();
             DataClass.TempPublication = null;
+            await hubContext.Clients.All.SendAsync("Notify", $"В {DateTime.Now.ToShortTimeString()} была добавлена статья под названием {publication.Name}.");
             return RedirectToAction("Index");
         }
 

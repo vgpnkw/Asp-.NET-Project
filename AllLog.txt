@@ -779,3 +779,193 @@ Now listening on: https://localhost:5001
 Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Failed executing DbCommand (35,020ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+An unhandled exception has occurred while executing the request.
+An exception occurred while calculating the database error page content. Skipping display of the database error page.
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia
+Invalid password for user.
+User failed to provide the correct password.
+Now listening on: https://localhost:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /Users/gapankowwitalik/Projects/WikiPedia

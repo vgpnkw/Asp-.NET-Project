@@ -551,3 +551,9 @@ Error Number:208,State:1,Class:16
 The view 'EditBlock' was not found. Searched locations: /Views/Home/EditBlock.cshtml, /Views/Shared/EditBlock.cshtml, /Pages/Shared/EditBlock.cshtml
 An unhandled exception has occurred while executing the request.
 An exception occurred while calculating the database error page content. Skipping display of the database error page.
+Failed executing DbCommand (35,020ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+An unhandled exception has occurred while executing the request.
+An exception occurred while calculating the database error page content. Skipping display of the database error page.
+Invalid password for user.
+User failed to provide the correct password.

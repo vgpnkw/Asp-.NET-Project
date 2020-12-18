@@ -30,5 +30,6 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Roles\" />
     <Folder Include="logs\" />
+    <Folder Include="signalR\" />
   </ItemGroup>
 </Project>

@@ -13,10 +13,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using WikiPedia.Models;
 using Microsoft.Extensions.Logging;
 using WikiPedia.logs;
 using System.IO;
+using WikiPedia.signalR;
 
 namespace WikiPedia
 {
@@ -49,8 +49,9 @@ namespace WikiPedia
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+            services.AddSignalR();
 
-            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,10 +78,11 @@ namespace WikiPedia
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapHub<ChatHub>("/chat");
+
+                endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
+                
             });
             loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), Configuration.GetSection("AllLog").Value),
                 Path.Combine(Directory.GetCurrentDirectory(), Configuration.GetSection("ErrorLog").Value));
