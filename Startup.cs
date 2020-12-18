@@ -19,6 +19,7 @@ using System.IO;
 using WikiPedia.signalR;
 using WikiPedia.Interfaces;
 using WikiPedia.Repositories;
+using WikiPedia.Servises;
 
 namespace WikiPedia
 {
@@ -38,12 +39,7 @@ namespace WikiPedia
             //string connection = Configuration["Data:ConnectionString:DefaultConnection"];
             services.AddDbContext<PublicationContext>(options => options.UseSqlServer(connection));
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //    options.UseSqlServer(
-            //        Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddDbContext<PublicationContext>(options =>
-            //    options.UseSqlServer(
-            //        Configuration.GetConnectionString("DefaultConnection")));
+         
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -52,6 +48,14 @@ namespace WikiPedia
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddTransient<IGetPublication, PublicationRepository>();
+            services.AddScoped<IEmailMessanger, EmailMessanger>();
+            services.AddSingleton<IEmailConfiguration>(new EmailConfiguration
+            {
+                SmtpServer = Configuration["EmailConfiguration:SmtpServer"],
+                SmtpPort = int.Parse(Configuration["EmailConfiguration:SmtpPort"]),
+                SmtpUsername = Configuration["EmailConfiguration:SmtpUsername"],
+                SmtpPassword = Configuration["EmailConfiguration:SmtpPassword"]
+            });
 
             services.AddControllersWithViews();
             services.AddSignalR();

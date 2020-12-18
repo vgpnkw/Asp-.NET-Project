@@ -1,29 +1,29 @@
 ﻿<Properties StartupConfiguration="{8153D107-112D-403B-8C7A-1DAF6BC95CFC}|Default">
   <MonoDevelop.Ide.ItemProperties.WikiPedia PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/EmailService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
-      <File FileName="Startup.cs" Line="56" Column="48" />
+      <File FileName="Startup.cs" Line="51" Column="25" />
       <File FileName="Repositories/PublicationRepositories.cs" Line="4" Column="28" />
       <File FileName="Interfaces/IGetPublication.cs" Line="10" Column="45" />
       <File FileName="Interfaces/IGetLiked.cs" Line="9" Column="47" />
       <File FileName="Models/EmailService.cs" Line="1" Column="1" />
-      <File FileName="Controllers/AnnouncmentController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/AnnouncmentController.cs" Line="80" Column="74" />
       <File FileName="Views/Announcment/Index.cshtml" Line="23" Column="8" />
+      <File FileName="Data/EmailConfiguration.cs" Line="17" Column="6" />
+      <File FileName="appsettings.json" Line="26" Column="30" />
+      <File FileName="Servises/EmailMessanger.cs" Line="39" Column="1" />
+      <File FileName="Models/EmailMessage.cs" Line="9" Column="59" />
+      <File FileName="Properties/launchSettings.json" Line="27" Column="4" />
+      <File FileName="README.md" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WikiPedia" expanded="True">
             <Node name="WikiPedia" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Interfaces" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="EmailService.cs" selected="True" />
-              </Node>
+              <Node name="Properties" expanded="True" />
               <Node name="Repositories" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Announcment" expanded="True" />
-              </Node>
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

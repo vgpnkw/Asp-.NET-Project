@@ -33,5 +33,6 @@
     <Folder Include="signalR\" />
     <Folder Include="Repositories\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Servises\" />
   </ItemGroup>
 </Project>
