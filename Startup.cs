@@ -17,6 +17,8 @@ using Microsoft.Extensions.Logging;
 using WikiPedia.logs;
 using System.IO;
 using WikiPedia.signalR;
+using WikiPedia.Interfaces;
+using WikiPedia.Repositories;
 
 namespace WikiPedia
 {
@@ -48,6 +50,9 @@ namespace WikiPedia
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddTransient<IGetPublication, PublicationRepository>();
+
             services.AddControllersWithViews();
             services.AddSignalR();
 

@@ -4,32 +4,32 @@
 }
 <form asp-action="edit" asp-controller="home" asp-route-id="@Model.Id">
     <div class="form-group">
-        <label asp-for="Name" class="control-label">Title</label>
+        <label asp-for="Name" class="control-label">Название</label>
         <input type="text" asp-for="Name" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="ShirtInfo" class="control-label">About</label>
+        <label asp-for="ShirtInfo" class="control-label">Краткое содержание</label>
         <input type="text" asp-for="ShirtInfo" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Info" class="control-label">Intro</label>
+        <label asp-for="Info" class="control-label">Основной текст</label>
         <input type="text" asp-for="Info" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="ImageName" class="control-label">Image</label>
+        <label asp-for="ImageName" class="control-label">Изображение</label>
         @if (Model.ImageName != null)
         {
-            <a class="btn btn-outline-warning btn-block" asp-action="EditPicture" asp-controller="Home" asp-route-pictureName="@Model.ImageName" asp-route-type="1">Edit an image</a>
+            <a class="btn btn-primary" asp-action="EditPicture" asp-controller="Home" asp-route-pictureName="@Model.ImageName" asp-route-type="1">Заменить изображение</a>
         }
         else
         {
-            <a class="btn btn-outline-info btn-block" asp-action="EditPicture" asp-controller="Home" asp-route-pictureName="@Model.ImageName" asp-route-type="1">Add an image</a>
+            <a class="btn btn-primary" asp-action="EditPicture" asp-controller="Home" asp-route-pictureName="@Model.ImageName" asp-route-type="1">Добавить изображение</a>
         }
         <input type="text" asp-for="ImageName" class="form-control" />
     </div>
-    <a class="btn btn-outline-info btn-block" asp-action="EditPart" asp-controller="Home" asp-route-id="@Model.Id">Add an partinfo</a>
+    <a class="btn btn-primary" asp-action="EditPart" asp-controller="Home" asp-route-id="@Model.Id">Добавить абзац</a>
     <table class="table">
-        <tr><td>Part</td><td>About</td></tr>
+        <tr><td>Абзацы:</td><td>Подробнее:</td></tr>
         @if (Model.Parts != null)
         {
             @foreach (var item in Model.Parts)
@@ -38,8 +38,8 @@
                     <td>@item.PartName</td>
                     <td>@item.Text</td>
                     <td>
-                        <a asp-action="EditPart" asp-controller="Home" asp-route-idBlock="@item.PartInfoId" asp-route-blockName="@item.PartName">Edit</a> |
-                        <a asp-action="DeletePart" asp-controller="Home" asp-route-idBlock="@item.PartInfoId" asp-route-name="@item.PartName">Remove</a>
+                        <a asp-action="EditPart" asp-controller="Home" asp-route-idBlock="@item.PartInfoId" asp-route-blockName="@item.PartName">Изменить</a> |
+                        <a asp-action="DeletePart" asp-controller="Home" asp-route-idBlock="@item.PartInfoId" asp-route-name="@item.PartName">Удалить</a>
                     </td>
                 </tr>
             }
@@ -47,6 +47,6 @@
         
     </table>
     <div class="form-group">
-        <input type="submit" value="Confirm" class="btn btn-outline-success" />
+        <input type="submit" value="Принять" class="btn btn-primary" />
     </div>
 </form>

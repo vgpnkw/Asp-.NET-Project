@@ -1,18 +1,14 @@
 ﻿<Properties StartupConfiguration="{8153D107-112D-403B-8C7A-1DAF6BC95CFC}|Default">
   <MonoDevelop.Ide.ItemProperties.WikiPedia PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WikiPedia.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/EmailService.cs">
     <Files>
-      <File FileName="Startup.cs" Line="15" Column="49" />
-      <File FileName="wwwroot/js/site.js" Line="1" Column="1" />
-      <File FileName="Views/Hello/Hello.cshtml" Line="1" Column="1" />
-      <File FileName="Controllers/HomeController.cs" Line="188" Column="19" />
-      <File FileName="Views/Home/Index.cshtml" Line="27" Column="38" />
-      <File FileName="Views/Home/Edit.cshtml" Line="5" Column="23" />
-      <File FileName="signalR/ChatHub.cs" Line="11" Column="1" />
-      <File FileName="libman.json" Line="10" Column="9" />
-      <File FileName="wwwroot/js/signalr/dist/browser/signalr.min.js" Line="1" Column="1" />
-      <File FileName="wwwroot/js/signalr/dist/browser/signalr.js" Line="1" Column="1" />
-      <File FileName="WikiPedia.csproj" Line="1" Column="1" />
+      <File FileName="Startup.cs" Line="56" Column="48" />
+      <File FileName="Repositories/PublicationRepositories.cs" Line="4" Column="28" />
+      <File FileName="Interfaces/IGetPublication.cs" Line="10" Column="45" />
+      <File FileName="Interfaces/IGetLiked.cs" Line="9" Column="47" />
+      <File FileName="Models/EmailService.cs" Line="1" Column="1" />
+      <File FileName="Controllers/AnnouncmentController.cs" Line="1" Column="1" />
+      <File FileName="Views/Announcment/Index.cshtml" Line="23" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,23 +16,13 @@
           <Node name="WikiPedia" expanded="True">
             <Node name="WikiPedia" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="signalR" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="EmailService.cs" selected="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="js" expanded="True">
-                  <Node name="signalr" expanded="True">
-                    <Node name="dist" expanded="True">
-                      <Node name="browser" expanded="True">
-                        <Node name="signalr.js" expanded="True" />
-                      </Node>
-                    </Node>
-                  </Node>
-                </Node>
+              <Node name="Repositories" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Announcment" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -47,9 +33,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/gapankowwitalik/Projects/WikiPedia/Views/Home/Index.cshtml" relfile="Views/Home/Index.cshtml" line="25" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

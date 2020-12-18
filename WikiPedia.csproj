@@ -31,5 +31,7 @@
     <Folder Include="Views\Roles\" />
     <Folder Include="logs\" />
     <Folder Include="signalR\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>
